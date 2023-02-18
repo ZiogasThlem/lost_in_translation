@@ -1,16 +1,19 @@
-import React, { createContext, useState } from 'react'
+import React, {createContext, useContext, useState} from 'react'
 
-export const UserContext = createContext()
+const UserContext = createContext()
+export const useUser = () => useContext(UserContext)
+
 
 const UserProvider = ({children}) => {
 
-  const [user, setUser] = useState("Context API test")
+  const [user, setUser] = useState(null)
+  const state = {user, setUser}
 
-  return (
-    <UserContext.Provider value = {[ user,setUser ]}>
+  return ( 
+    <UserContext.Provider value = {state}>
       {children}
     </UserContext.Provider>
-  )
+  ) 
 }
 
 export default UserProvider
