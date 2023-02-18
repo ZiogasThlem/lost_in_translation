@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { userLogIn } from "../../api/user";
 import { storageSave } from "../../misc/storage";
 import { useUser } from "../../Context/UserProvider";
+import { STORAGE_USER_KEY } from "../../misc/storageKeys";
 
 const usernameConfig = {
   required: true,
@@ -11,6 +12,7 @@ const usernameConfig = {
 };
 
 const LoginForm = () => {
+  // hooks
   const {
     register,
     handleSubmit,
@@ -22,30 +24,29 @@ const LoginForm = () => {
   const [loading, setLoading] = useState(false);
   const [apiError, SetApiError] = useState(null);
 
+  // redirecting to /translation if user is found
   useEffect(()=>{
     if (user != null) navigate('translation')
   },[user, navigate])
 
   const onSubmit = async ({ username }) => {
-    setLoading(true);
+    setLoading(true); // loading text appears
     const [error, userResponse] = await userLogIn(username);
     if (error != null) SetApiError(error);
     if (userResponse != null) {
-      storageSave("website-user", userResponse);
-      setUser(userResponse)
+      storageSave(STORAGE_USER_KEY, userResponse); //save user to local storage
+      setUser(userResponse) //loading text disappears
     }
     setLoading(false);
   };
 
   const errorDisplay = (() => {
     if (!errors.username) return null;
-
     if (errors.username.type === "required")
       return <span> Empty username</span>;
     else if (errors.username.type === "minLength")
       return <span> username is too short </span>;
-
-    // return <span>Username ok!</span>
+    // return <span>Username ok!</span> doesnt work yet idk
   })();
 
   return (

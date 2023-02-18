@@ -1,4 +1,5 @@
 import React from 'react'
+import withAuth from '../misc/withAuth'
 
 const Translation = () => {
   return (
@@ -6,4 +7,4 @@ const Translation = () => {
   )
 }
 
-export default Translation
+export default withAuth(Translation)
