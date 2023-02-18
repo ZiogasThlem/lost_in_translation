@@ -51,7 +51,6 @@ const LoginForm = () => {
 
   return (
     <>
-      <h1>LoginForm</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <fieldset>
           <label htmlFor="username"> Username </label>
