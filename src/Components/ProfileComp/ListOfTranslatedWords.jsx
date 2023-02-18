@@ -1,9 +1,16 @@
-import React from 'react'
+import TranslatedWord from "./TranslatedWord";
 
-const ListOfTranslatedWords = () => {
+const ListOfTranslatedWords = ({ translations }) => {
+  const listOfWords = translations.map((word, index) => (
+    <TranslatedWord key={index + 1 + " " + word} word={word} />
+  ));
+
   return (
-    <h2>ListOfTranslatedWords</h2>
-  )
-}
+    <section>
+      <h3>TRANSLATION LIST</h3>
+      <ul>{listOfWords}</ul>
+    </section>
+  );
+};
 
-export default ListOfTranslatedWords
+export default ListOfTranslatedWords;

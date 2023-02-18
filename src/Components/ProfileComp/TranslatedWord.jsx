@@ -1,9 +1,6 @@
 import React from 'react'
 
-const TranslatedWord = () => {
-  return (
-    <div>TranslatedWord</div>
-  )
-}
+const TranslatedWord = ({word}) => <li>{word}</li>
+
 
 export default TranslatedWord

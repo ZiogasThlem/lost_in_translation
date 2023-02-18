@@ -6,3 +6,7 @@ export const storageRead = key => {
     if (data) return JSON.parse(data)
     return null
 }
+
+export const storageDelete = key => {
+    localStorage.removeItem(key)
+}
