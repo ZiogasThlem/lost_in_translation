@@ -5,10 +5,11 @@ const ListOfTranslatedWords = ({ translations }) => {
     <TranslatedWord key={index + 1 + " " + word} word={word} />
   ));
 
+
   return (
     <section>
       <h3>TRANSLATION LIST</h3>
-      <ul>{listOfWords}</ul>
+      <ul>{listOfWords.reverse().slice(0,10)}</ul>
     </section>
   );
 };

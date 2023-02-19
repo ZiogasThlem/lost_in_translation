@@ -28,7 +28,15 @@ const Translation = () => {
   // displaying the word as ASL
   const signs = wordToImage(word).map(sign => 
    <ImageHolder key={sign.id} sign={sign}/>)
+   
+   // change every letter typed into its respective image
+   const handleTranslation = (letter) => {
+     setWord(letter)
+     return <img src={wordToImage(letter).
+       find(element => element.name===letter)}/>
+   }
 
+   
   const handleTranslationSubmission =  async sign => {
     if (sign.length === 0){
       alert('Type a word to begin.')
@@ -42,12 +50,6 @@ const Translation = () => {
 
   }
 
-  // change every letter typed into its respective image
-  const handleTranslation = (letter) => {
-    setWord(letter)
-    return <img src={wordToImage(letter).
-      find(element => element.name===letter)}/>
-  }
 
 
   return (

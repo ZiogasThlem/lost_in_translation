@@ -6,11 +6,11 @@ const NavbarTop = () => {
 
   const {user} = useUser()
   return (
-    <nav>
+    <nav id='nav-top'>
       {user != null&& 
       <ul>
-            <li><NavLink to='/translation'>Translations</NavLink></li>
-            <li><NavLink to='/profile'>Profile</NavLink></li>
+            <li id='nav-item'><NavLink to='/translation'>Translations</NavLink></li>
+            <li id='nav-item'><NavLink to='/profile'>Profile</NavLink></li>
         </ul>
       } 
     </nav>
