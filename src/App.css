@@ -1,0 +1,10 @@
+#ASL-word-display{
+    border: 1px solid black;
+    background-color: aqua;
+}
+#word{
+    border: 3px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+/* #submit-translation{
+} */

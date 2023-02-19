@@ -8,8 +8,8 @@ const Translation = () => {
   return (
     <>
       <TranslationHeader />
-      <TranslationResult />
       <InputForm />
+      <TranslationResult />
     </>
   )
 }
