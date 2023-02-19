@@ -35,9 +35,9 @@ const LoginForm = () => {
     if (error != null) SetApiError(error);
     if (userResponse != null) {
       storageSave(STORAGE_USER_KEY, userResponse); //save user to local storage
-      setUser(userResponse) //loading text disappears
+      setUser(userResponse) 
     }
-    setLoading(false);
+    setLoading(false); //loading text disappears
   };
 
   const errorDisplay = (() => {
@@ -50,7 +50,6 @@ const LoginForm = () => {
   })();
 
   return (
-    <>
       <form onSubmit={handleSubmit(onSubmit)}>
         <fieldset>
           <label htmlFor="username"> Username </label>
@@ -67,7 +66,6 @@ const LoginForm = () => {
         {loading && <p>Redirecting</p>}
         {apiError && <p>{apiError}</p>}
       </form>
-    </>
   );
 };
 

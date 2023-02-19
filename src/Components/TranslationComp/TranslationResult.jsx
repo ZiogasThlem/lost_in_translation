@@ -1,16 +1,17 @@
-import React from 'react'
+import { useForm } from "react-hook-form"
 
-const TranslationResult = () => {
+const TranslationResult = ({onSubmission, onTranslation}) => {
+
+  const {register, handleSubmit} = useForm()
+  const onSubmit = ({word}) => onSubmission(word)
+  const onChange =({word}) => onTranslation(word)
+  
   return (
-    <>
-      <section id='ASL-word-display'>
-        <div id='word'>
-          <h2>TranslationResult</h2>
-          <p>ASL word will be displayed here</p>
-        </div>
-        <button type='submit' id='submit-translation'>Submit Translation</button>
-      </section>
-    </>
+    <form onSubmit={handleSubmit(onSubmit)} onChange={handleSubmit(onChange)}>
+      <input type="text" {...register('word')} 
+      placeholder="english word"/>
+      <button type='submit' id='submit-translation'>Submit Translation</button>
+    </form>
   )
 }
 

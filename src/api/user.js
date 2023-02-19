@@ -5,7 +5,7 @@ const api_URL = process.env.REACT_APP_API_URL
 const userCheck = async (username) => {
     try {
         const response = await fetch(`${api_URL}?username=${username}`)
-        if (!response.ok) throw new Error('ERRORRRRR' + username)
+        if (!response.ok) throw new Error(username+"doesn't exist")
 
         const data = await response.json()
         return [null, data]

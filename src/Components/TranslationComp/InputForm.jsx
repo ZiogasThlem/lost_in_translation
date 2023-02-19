@@ -1,13 +1,23 @@
-import { useForm } from 'react-hook-form'
+import { useForm } from "react-hook-form"
 
 const InputForm = () => {
 
+  const {register, handleSubmit} = useForm()
+
+  const onSubmit = data => {
+
+  }
+  const clickHandle = event => {
+    event.preventDefault()
+    console.log()
+  }
 
   return (
-    <>
-      <h3>InputForm</h3>
-      <input type="text" placeholder="english word"/>
-    </>
+    <form onSubmit={handleSubmit(onSubmit)}>
+        {/* <input type="text" {...register('word')}
+        placeholder="english word"/>
+        <button type='submit' onClick={clickHandle}>Translate</button> */}
+    </form>
   )
 }
 

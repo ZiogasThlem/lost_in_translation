@@ -15,11 +15,10 @@ const ProfileButtons = () => {
   }
 
   return (
-    <ul>
-      <li><Link to='/translation'>Translations</Link></li>
-      <li><button>Clear History</button></li>
-      <li><button onClick={handleLogout}>Log Out</button></li>
-    </ul>
+    <>
+      <button>Clear History</button>
+      <button onClick={handleLogout}>Log Out</button>
+    </>
   )
 }
 
