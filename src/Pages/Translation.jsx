@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { newTranslation } from '../api/translation'
 import ImageHolder from '../Components/TranslationComp/ImageHolder'
-import InputForm from '../Components/TranslationComp/InputForm'
 import TranslationHeader from '../Components/TranslationComp/TranslationHeader'
 import TranslationResult from '../Components/TranslationComp/TranslationResult'
 import { useUser } from '../Context/UserProvider'
@@ -25,6 +24,8 @@ const Translation = () => {
 
   const {user, setUser} = useUser()
   const [word, setWord] = useState('')
+
+  // displaying the word as ASL
   const signs = wordToImage(word).map(sign => 
    <ImageHolder key={sign.id} sign={sign}/>)
 
@@ -41,7 +42,9 @@ const Translation = () => {
 
   }
 
+  // change every letter typed into its respective image
   const handleTranslation = (letter) => {
+    setWord(letter)
     return <img src={wordToImage(letter).find(element => element.name===letter )}/>
   }
 
@@ -49,9 +52,8 @@ const Translation = () => {
   return (
     <>
       <TranslationHeader />
-      <InputForm />
         <TranslationResult onSubmission={handleTranslationSubmission}
-        onTranslation={handleTranslation}/>
+        onTranslation={handleTranslation}/> 
       <div  id='ASL-word-display'>
         {signs}
       </div>
