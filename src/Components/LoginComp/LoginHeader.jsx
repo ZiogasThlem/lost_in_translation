@@ -2,7 +2,12 @@ import React from 'react'
 
 const LoginHeader = () => {
   return (
-    <h2>LoginHeader</h2>
+    <>
+      <p>Welcome to</p>
+      <p>Lost in Translation</p>
+      <img src='' width='80' height='100'/>
+      <p>Let's get started...</p>
+    </>
   )
 }
 

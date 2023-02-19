@@ -1,7 +1,7 @@
 import React from 'react'
 import { useUser } from '../../Context/UserProvider'
 import { storageDelete, storageSave } from '../../misc/storage'
-import { STORAGE_USER_KEY } from '../../misc/storageKeys'
+import { STORAGE_USER_KEY } from '../../misc/storage'
 import {clearHistory} from '../../api/translation'
 
 const ProfileButtons = () => {
@@ -28,8 +28,8 @@ const ProfileButtons = () => {
 
   return (
     <>
-      <button onClick={handleClearHistory}>Clear History</button>
-      <button onClick={handleLogout}>Log Out</button>
+      <button className='btn btn-danger' onClick={handleClearHistory}>Clear History</button>
+      <button className='btn btn-dark' onClick={handleLogout}>Log Out</button>
     </>
   )
 }

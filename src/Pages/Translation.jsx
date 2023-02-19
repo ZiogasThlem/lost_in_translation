@@ -5,7 +5,7 @@ import TranslationHeader from '../Components/TranslationComp/TranslationHeader'
 import TranslationResult from '../Components/TranslationComp/TranslationResult'
 import { useUser } from '../Context/UserProvider'
 import { storageSave } from '../misc/storage'
-import { STORAGE_USER_KEY } from '../misc/storageKeys'
+import { STORAGE_USER_KEY } from '../misc/storage'
 import withAuth from '../misc/withAuth'
 
 // looping through word input and turning
@@ -45,14 +45,15 @@ const Translation = () => {
   // change every letter typed into its respective image
   const handleTranslation = (letter) => {
     setWord(letter)
-    return <img src={wordToImage(letter).find(element => element.name===letter )}/>
+    return <img src={wordToImage(letter).
+      find(element => element.name===letter)}/>
   }
 
 
   return (
     <>
       <TranslationHeader />
-        <TranslationResult onSubmission={handleTranslationSubmission}
+      <TranslationResult onSubmission={handleTranslationSubmission}
         onTranslation={handleTranslation}/> 
       <div  id='ASL-word-display'>
         {signs}

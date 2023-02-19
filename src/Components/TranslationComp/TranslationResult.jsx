@@ -10,7 +10,7 @@ const TranslationResult = ({onSubmission, onTranslation}) => {
     <form onSubmit={handleSubmit(onSubmit)} onChange={handleSubmit(onChange)}>
       <input type="text" {...register('word')} 
       placeholder="english word"/>
-      <button type='submit' id='submit-translation'>Submit Translation</button>
+      <button className='btn btn-success' type='submit' id='submit-translation'>Submit Translation</button>
     </form>
   )
 }

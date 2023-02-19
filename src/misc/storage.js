@@ -1,3 +1,5 @@
+export const STORAGE_USER_KEY = 'website-user'
+
 export const storageSave = (key, value) => {
     if ((!key)||(!value)) throw new Error('something is missing')
     sessionStorage.setItem(key, JSON.stringify(value))

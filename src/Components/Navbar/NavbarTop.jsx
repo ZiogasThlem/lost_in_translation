@@ -7,7 +7,7 @@ const NavbarTop = () => {
   const {user} = useUser()
   return (
     <nav>
-      {user!= null&& 
+      {user != null&& 
       <ul>
             <li><NavLink to='/translation'>Translations</NavLink></li>
             <li><NavLink to='/profile'>Profile</NavLink></li>

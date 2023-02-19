@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { userLogIn } from "../../api/user";
 import { storageSave } from "../../misc/storage";
 import { useUser } from "../../Context/UserProvider";
-import { STORAGE_USER_KEY } from "../../misc/storageKeys";
+import { STORAGE_USER_KEY } from "../../misc/storage";
 
 const usernameConfig = {
   required: true,
@@ -60,7 +60,8 @@ const LoginForm = () => {
           />
           {errorDisplay}
         </fieldset>
-        <button type="submit" disabled={loading}>
+        <button type="submit" disabled={loading}
+        className='btn btn-primary'>
           LogIn
         </button>
         {loading && <p>Redirecting</p>}
