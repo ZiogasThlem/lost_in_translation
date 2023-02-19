@@ -5,6 +5,8 @@ import InputForm from '../Components/TranslationComp/InputForm'
 import TranslationHeader from '../Components/TranslationComp/TranslationHeader'
 import TranslationResult from '../Components/TranslationComp/TranslationResult'
 import { useUser } from '../Context/UserProvider'
+import { storageSave } from '../misc/storage'
+import { STORAGE_USER_KEY } from '../misc/storageKeys'
 import withAuth from '../misc/withAuth'
 
 // looping through word input and turning
@@ -21,23 +23,28 @@ const wordToImage = word => {
 
 const Translation = () => {
 
-  const {user} = useUser()
+  const {user, setUser} = useUser()
   const [word, setWord] = useState('')
+  const signs = wordToImage(word).map(sign => 
+   <ImageHolder key={sign.id} sign={sign}/>)
 
   const handleTranslationSubmission =  async sign => {
     if (sign.length === 0){
       alert('Type a word to begin.')
       return
     }
-    const [error, result] = await newTranslation(user, sign)
+    const [error, updatedUser] = await newTranslation(user, sign)
+    if (error != null) return
+
+    storageSave(STORAGE_USER_KEY, updatedUser)
+    setUser(updatedUser)
+
   }
 
-  const handleTranslation = () => {
-    return signs
+  const handleTranslation = (letter) => {
+    return <img src={wordToImage(letter).find(element => element.name===letter )}/>
   }
 
-  const signs = wordToImage(word).map(sign => 
-   <ImageHolder key={sign.id} sign={sign}/>)
 
   return (
     <>

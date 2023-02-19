@@ -16,9 +16,25 @@ export const newTranslation = async (user, translation) => {
         return [null, result]
 
     } catch (error) {
-        
+        return [error.message, null]
     }
 } 
-export const clearHistory = user => {
+export const clearHistory = async userID => {
+
+    try {
+        const response = await fetch(`${api_URL}/${userID}`,{
+            method: 'PATCH',
+            headers: createHeaders(),
+            body: JSON.stringify({
+                translations: []
+            })
+        })
+        if (!response.ok) throw new Error('cnt dlt')
+        const result = await response.json()
+        return [null, result]
+        
+    } catch (error) {
+        return [error.message, null]
+    }
 
 }

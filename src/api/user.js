@@ -44,3 +44,13 @@ export const userLogIn = async (username) => {
 
     return await userCreate(username)
 }
+export const userById = async (userID) => {
+    try {
+        const response = await fetch(`${api_URL}/${userID}`)
+        if (!response.ok) throw new Error('nope')
+        const user = await response.json()
+        return [null, user]
+    } catch (error) {
+        return [error.message, null]
+    }
+}
