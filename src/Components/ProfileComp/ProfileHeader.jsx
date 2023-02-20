@@ -1,6 +1,6 @@
 const ProfileHeader = () => {
   return (
-    <div id="profile-header">
+    <header id="profile-header" className="grid-row-1">
       <img
         className="profile-header-item"
         id="logo"
@@ -11,7 +11,7 @@ const ProfileHeader = () => {
       <p className="profile-header-item">
         Let's see what you have translated so far...
       </p>
-    </div>
+    </header>
   );
 };
 

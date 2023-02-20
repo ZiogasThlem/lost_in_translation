@@ -6,7 +6,7 @@ const NavbarTop = () => {
 
   const {user} = useUser()
   return (
-    <nav id='nav-top'>
+    <nav id='nav-top' className="grid-row-1">
       {user != null&& 
       <>
         <h1 id='website-name'>Lost in Translation</h1>

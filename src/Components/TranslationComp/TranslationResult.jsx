@@ -17,7 +17,7 @@ const TranslationResult = ({onSubmission, onTranslation}) => {
       <input type="text" 
         maxLength="40"
         className="form-control"
-        {...register('word')}
+        {...register('word',{pattern: /[A-Za-z]/})}
         placeholder="english word"/>
       <button className='btn btn-lg btn-success' type='submit' 
       id='submit-translation'>Submit Translation</button>
