@@ -1,17 +1,25 @@
 import { useForm } from "react-hook-form"
-import TranslateWordButton from "./TranslateWordButton"
 
 const TranslationResult = ({onSubmission, onTranslation}) => {
 
   const {register, handleSubmit} = useForm()
   const onSubmit = ({word}) => onSubmission(word)
-  const onChange =({word}) => onTranslation(word)
+  const onChange = ({word}) => onTranslation(word)
+
+
   
   return (
-    <form onSubmit={handleSubmit(onSubmit)} onChange={handleSubmit(onChange)}>
-      <input type="text" {...register('word')} 
-      placeholder="english word"/>
-      <button className='btn btn-success' type='submit' 
+    <form className="input-group"
+      id='translation-form'
+      onChange={handleSubmit(onChange)}
+      onSubmit={handleSubmit(onSubmit)}
+      >
+      <input type="text" 
+        maxLength="40"
+        className="form-control"
+        {...register('word')}
+        placeholder="english word"/>
+      <button className='btn btn-lg btn-success' type='submit' 
       id='submit-translation'>Submit Translation</button>
     </form>
   )

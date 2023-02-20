@@ -28,8 +28,8 @@ const ProfileButtons = () => {
 
   return (
     <>
-      <button className='btn btn-danger' onClick={handleClearHistory}>Clear History</button>
-      <button className='btn btn-dark' onClick={handleLogout}>Log Out</button>
+      <button id='btn' className='btn btn-lg btn-danger' onClick={handleClearHistory}>Clear History</button>
+      <button id='btn' className='btn btn-lg btn-dark' onClick={handleLogout}>Log Out</button>
     </>
   )
 }

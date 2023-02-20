@@ -1,2 +1,3 @@
-const TranslatedWord = ({word}) => <li>{word}</li>
+const TranslatedWord = ({word}) => 
+    <li id='translated-word' >{word}</li>
 export default TranslatedWord

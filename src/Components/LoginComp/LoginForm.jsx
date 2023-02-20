@@ -50,13 +50,13 @@ const LoginForm = () => {
   })();
 
   return (
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <fieldset>
-          <label htmlFor="username"> Username </label>
+      <form className="input-group" onSubmit={handleSubmit(onSubmit)}>
+        <fieldset id='login-form'>
           <input
             type="text"
             {...register("username", usernameConfig)}
-            placeholder="username"
+            placeholder="Mr. Usemyhandstotalk"
+            className="form-control"
           />
           {errorDisplay}
         </fieldset>

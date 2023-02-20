@@ -24,8 +24,10 @@ const Profile = () => {
   return (
     <>
       <ProfileHeader username={user.username} />
-      <ListOfTranslatedWords translations={user.translations} />
-      <ProfileButtons />
+      <div id='profile-div'>
+        <ListOfTranslatedWords translations={user.translations} />
+        <ProfileButtons />
+      </div>
     </>
   )
 }

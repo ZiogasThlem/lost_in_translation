@@ -1,16 +1,19 @@
-import React from 'react'
-
+import React from "react";
 
 const LoginHeader = () => {
   return (
-    <header id='login-header'>
-      <p>Welcome to</p>
-      <p>Lost in Translation</p>
-      {/* image not working lul */}
-      <img src={`public\images\Logo-Hello.png`} alt='eh?' width='120' height='140'/>
-      <p>Let's get started...</p>
+    <header id="login-header">
+      <img
+        className="login-header-item"
+        id="logo"
+        src="images\Logo-Hello.png"
+        alt="eh?"
+      />
+      <p className="login-header-item" id='item-2'>Welcome to</p>
+      <p className="login-header-item" id='item-3'>Lost in Translation!</p>
+      <p className="login-header-item" id='item-4'>Let's get started...</p>
     </header>
-  )
-}
+  );
+};
 
-export default LoginHeader
+export default LoginHeader;

@@ -7,9 +7,14 @@ const ListOfTranslatedWords = ({ translations }) => {
 
 
   return (
-    <section>
-      <h3>TRANSLATION LIST</h3>
-      <ul>{listOfWords.reverse().slice(0,10)}</ul>
+    <section id='sign-list'>
+      {listOfWords.length>0 && 
+      <fieldset>
+        <h3 id='sign-list-header'><u>Words in ASL</u></h3>
+        <ul>{listOfWords.reverse().slice(0,10)}</ul>
+      </fieldset>}
+      {listOfWords.length===0 && 
+      <h1>well...better go translate some words</h1>}
     </section>
   );
 };
