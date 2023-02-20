@@ -50,7 +50,7 @@ const LoginForm = () => {
   })();
 
   return (
-      <form className="input-group" onSubmit={handleSubmit(onSubmit)}>
+      <form className="input-group-lg" onSubmit={handleSubmit(onSubmit)}>
         <fieldset id='login-form'>
           <input
             type="text"
@@ -61,7 +61,7 @@ const LoginForm = () => {
           {errorDisplay}
         </fieldset>
         <button type="submit" disabled={loading}
-        className='btn btn-primary'>
+        className='btn btn-lg btn-primary'>
           LogIn
         </button>
         {loading && <p>Redirecting</p>}

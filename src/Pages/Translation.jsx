@@ -56,14 +56,16 @@ const Translation = () => {
   return (
     <>
       <TranslationHeader />
-      <TranslationResult
-        onSubmission={handleTranslationSubmission}
-        onTranslation={handleTranslation}
-      />
-      <div id="ASL-word-display">
-        {signs}
+      <div id='translation-div'>
+        <TranslationResult
+          onSubmission={handleTranslationSubmission}
+          onTranslation={handleTranslation}
+        />
+        <div id="ASL-word-display">
+          {signs}
+        </div>
+        <TranslateWordButton />
       </div>
-      <TranslateWordButton />
     </>
   );
 };
