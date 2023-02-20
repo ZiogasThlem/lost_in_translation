@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { newTranslation } from '../api/translation'
 import ImageHolder from '../Components/TranslationComp/ImageHolder'
+import TranslateWordButton from '../Components/TranslationComp/TranslateWordButton'
 import TranslationHeader from '../Components/TranslationComp/TranslationHeader'
 import TranslationResult from '../Components/TranslationComp/TranslationResult'
 import { useUser } from '../Context/UserProvider'
-import { storageSave } from '../misc/storage'
-import { STORAGE_USER_KEY } from '../misc/storage'
+import { storageSave, STORAGE_USER_KEY } from '../misc/storage'
 import withAuth from '../misc/withAuth'
 
 // looping through word input and turning
@@ -59,6 +59,7 @@ const Translation = () => {
         onTranslation={handleTranslation}/> 
       <div  id='ASL-word-display'>
         {signs}
+        <TranslateWordButton />
       </div>
     </>
   )

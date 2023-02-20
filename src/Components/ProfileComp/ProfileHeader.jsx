@@ -1,9 +1,6 @@
-import React from 'react'
-
-const ProfileHeader = ({username}) => {
+const ProfileHeader = () => {
   return (
-    <h1>Hello {username}</h1>
-
+    <h1>ASL is Awesome!</h1>
   )
 }
 

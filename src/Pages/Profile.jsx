@@ -5,8 +5,7 @@ import withAuth from '../misc/withAuth'
 import { useUser } from '../Context/UserProvider'
 import ProfileButtons from '../Components/ProfileComp/ProfileButtons'
 import { userById } from '../api/user'
-import { storageSave } from '../misc/storage'
-import { STORAGE_USER_KEY } from '../misc/storage'
+import { storageSave, STORAGE_USER_KEY } from '../misc/storage'
 
 const Profile = () => {
   
