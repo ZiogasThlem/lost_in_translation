@@ -9,14 +9,14 @@ const TranslationResult = ({onSubmission, onTranslation}) => {
 
   
   return (
-    <form className="input-group"
+    <form className="input-group-lg"
       id='translation-form'
       onChange={handleSubmit(onChange)}
       onSubmit={handleSubmit(onSubmit)}
       >
       <input type="text" 
         maxLength="40"
-        className="form-control"
+        className="form-control-lg"
         {...register('word',{pattern: /[A-Za-z]/})}
         placeholder="english word"/>
       <button className='btn btn-lg btn-success' type='submit' 

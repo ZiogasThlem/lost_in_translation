@@ -26,8 +26,8 @@ const Profile = () => {
       <ProfileHeader username={user.username} />
       <div id='profile-div'>
         <ListOfTranslatedWords translations={user.translations} />
+        <ProfileButtons />
       </div>
-      <ProfileButtons />
     </>
   )
 }

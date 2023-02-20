@@ -27,10 +27,10 @@ const ProfileButtons = () => {
   }
 
   return (
-    <div id='profile-buttons-div'>
+    <span id='profile-buttons-div'>
       <button id='btn' className='btn btn-lg btn-danger' onClick={handleClearHistory}>Clear History</button>
       <button id='btn' className='btn btn-lg btn-dark' onClick={handleLogout}>Log Out</button>
-    </div>
+    </span>
   )
 }
 
