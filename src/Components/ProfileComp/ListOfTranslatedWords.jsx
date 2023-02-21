@@ -14,7 +14,7 @@ const ListOfTranslatedWords = ({ translations }) => {
         <ul id='list-of-translated-words'>{listOfWords.reverse().slice(0,10)}</ul>
       </fieldset>}
       {listOfWords.length===0 && 
-      <h1>well...better go translate some words</h1>}
+      <p id='empty-translation-list'>well...better go translate some words</p>}
     </section>
   );
 };

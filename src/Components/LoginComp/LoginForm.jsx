@@ -64,7 +64,7 @@ const LoginForm = () => {
         className='btn btn-lg btn-primary'>
           LogIn
         </button>
-        {loading && <p>Redirecting</p>}
+        {loading && <p id='loading'>Redirecting</p>}
         {apiError && <p>{apiError}</p>}
       </form>
   );

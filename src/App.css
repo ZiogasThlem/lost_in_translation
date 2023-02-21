@@ -12,7 +12,7 @@ body{
 }
 .App{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
 }
 #website-name{
     font-family: var(--happy-font);
@@ -20,16 +20,18 @@ body{
 #login-header,
 #translation-header,
 #profile-header{
-    background-color: var(--bleh);
+    background-color: #FAB93B;
     font-family: var(--happy-font);
     border-bottom: var(--border-default);
     margin-bottom: 0.5%;
     max-height: 50%;
     width: 100%;
 }
-#translation-header,
-#profile-header{
-    background-color: #FAB93B;
+#profile-header,
+#translation-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 #item-1{
     display: inline-block;
@@ -42,10 +44,14 @@ body{
     font-size: 77px;
 }
 .translation-header-item,
-.profile-header-item{
+#profile-header-item-2{
     display: inline-block;
-    font-size: 45px;
-    margin-right: 15px;
+    font-size: 65px;
+    margin: 0px 15px 0px 15px;
+}
+#profile-header-item-1{
+    display: inline-block;
+    font-size: 75px;
 }
 #login-form,
 #translation-form{
@@ -109,8 +115,6 @@ ul{
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    position: absolute;
-    bottom: 0;
     background-color: var(--bleh);
     max-height:50px; 
     border-top: var(--border-default);
@@ -119,6 +123,8 @@ ul{
     flex: 65%;
     display: grid;
     justify-items: center;
+    max-height: max-content;
+    flex-grow: 1;
 }
 #profile-div{
     flex: 70%;
@@ -129,5 +135,32 @@ ul{
 .input-group-lg{
     display: flex;
     flex: 70%;
+    flex-direction: row;
     justify-content: center;
+}
+#profile-buttons-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#rdrct{
+    font-size: 25px;
+}
+#login-header{
+    display: flex;
+}
+
+#login-header,
+#translation-header,
+#profile-header,
+.input-group-lg,
+#translation-div,
+#profile-div{
+    padding: 12px;
+}
+#loading{
+    font-size: 30px;
+}
+#empty-translation-list{
+    font-size:30px;
 }
