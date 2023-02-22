@@ -50,7 +50,7 @@ const LoginForm = () => {
   })();
 
   return (
-      <form className="input-group-lg" onSubmit={handleSubmit(onSubmit)}>
+      <form className="input-group-lg" id='login' onSubmit={handleSubmit(onSubmit)}>
         <fieldset id='login-form'>
           <input
             type="text"

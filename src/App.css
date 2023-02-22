@@ -9,6 +9,8 @@ body{
     font-family: var(--unhappy-font);
     position: relative;
     min-height: 100vh;
+    min-width: 1024px;
+    
 }
 .App{
     display: flex;
@@ -114,6 +116,8 @@ ul{
 #nvbr{
     display: flex;
     justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
     width: 100%;
     background-color: var(--bleh);
     max-height:50px; 
@@ -124,13 +128,14 @@ ul{
     display: grid;
     justify-items: center;
     max-height: max-content;
-    flex-grow: 1;
+    margin-bottom: 10%;
 }
 #profile-div{
     flex: 70%;
     display: flex;
     flex-flow: column wrap;
     align-content: center;
+    margin-top: 3%;
 }
 .input-group-lg{
     display: flex;
@@ -138,10 +143,14 @@ ul{
     flex-direction: row;
     justify-content: center;
 }
+#login{
+    margin: 15% 1%;
+}
 #profile-buttons-div{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 10%;
 }
 #rdrct{
     font-size: 25px;
