@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useState } from "react";
 import { newTranslation } from "../api/translation";
 import ImageHolder from "../Components/TranslationComp/ImageHolder";
 import TranslationHeader from "../Components/TranslationComp/TranslationHeader";
@@ -24,10 +24,8 @@ const wordToImage = (word) => {
 };
 
 const Translation = () => {
-
   const { user, setUser } = useUser();
   const [word, setWord] = useState("");
-
 
   // displaying the word as ASL
   const signs = wordToImage(word).map((sign) => (
@@ -36,11 +34,16 @@ const Translation = () => {
 
   // change every letter typed into its respective image
   const handleTranslation = (letter) => {
-
     setWord(letter);
-    return <img src={wordToImage(letter).find((element) => element.name === letter)}/>
+    return (
+      <img
+        src={wordToImage(letter).find((element) => element.name === letter)}
+      />
+    );
   };
 
+  // function for submiting translated word to API,
+  // and display it to profile page
   const handleTranslationSubmission = async (word) => {
     if (word.length === 0) {
       alert("Type a word to begin.");
@@ -49,7 +52,7 @@ const Translation = () => {
     const [error, updatedUser] = await newTranslation(user, word);
     if (error != null) return;
 
-    alert(`${word} is registered in your profile!`)
+    alert(`${word} is registered in your profile!`);
     storageSave(STORAGE_USER_KEY, updatedUser);
     setUser(updatedUser);
   };
@@ -57,18 +60,20 @@ const Translation = () => {
   return (
     <>
       <TranslationHeader />
-      <div id='translation-div'>
+      <div id="translation-div">
         <TranslationResult
           onSubmission={handleTranslationSubmission}
           onTranslation={handleTranslation}
         />
         <div id="ASL-word-display">
           {signs}
-        {signs.length===0 && 
-        <p id='empty-ASL-list'>
-          This is a sign that you
-          must enter some words 👨‍🏫
-        </p>}
+          {/* displaying while user 
+          hasn't type anything */}
+          {signs.length === 0 && (
+            <p id="empty-ASL-list">
+              This is a "sign" that you must enter some words 👨‍🏫
+            </p>
+          )}
         </div>
       </div>
     </>

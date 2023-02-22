@@ -1,14 +1,14 @@
-import React from 'react'
-import LoginForm from '../Components/LoginComp/LoginForm'
-import LoginHeader from '../Components/LoginComp/LoginHeader'
+import React from "react";
+import LoginForm from "../Components/LoginComp/LoginForm";
+import LoginHeader from "../Components/LoginComp/LoginHeader";
 
 const LogIn = () => {
   return (
     <>
-      <LoginHeader/>
-      <LoginForm/>
+      <LoginHeader />
+      <LoginForm />
     </>
-  )
-}
+  );
+};
 
-export default LogIn
+export default LogIn;

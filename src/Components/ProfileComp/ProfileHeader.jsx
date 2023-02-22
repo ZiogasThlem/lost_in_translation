@@ -1,3 +1,4 @@
+// header component for profile page
 const ProfileHeader = () => {
   return (
     <header id="profile-header" className="grid-row-1">

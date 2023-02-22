@@ -1,3 +1,4 @@
+// header component for translation page
 const TranslationHeader = () => {
   return (
     <header id="translation-header">
