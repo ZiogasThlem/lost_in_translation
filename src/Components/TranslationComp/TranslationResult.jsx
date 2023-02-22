@@ -20,7 +20,7 @@ const TranslationResult = ({onSubmission, onTranslation}) => {
         {...register('word',{pattern: /[A-Za-z]/})}
         placeholder="english word"/>
       <button className='btn btn-lg btn-success' type='submit' 
-      id='submit-translation'>Submit Translation</button>
+      id='submit-translation'>Save Translation</button>
     </form>
   )
 }

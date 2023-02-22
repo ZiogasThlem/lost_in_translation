@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { newTranslation } from "../api/translation";
 import ImageHolder from "../Components/TranslationComp/ImageHolder";
-import TranslateWordButton from "../Components/TranslationComp/TranslateWordButton";
 import TranslationHeader from "../Components/TranslationComp/TranslationHeader";
 import TranslationResult from "../Components/TranslationComp/TranslationResult";
 import { useUser } from "../Context/UserProvider";
@@ -35,7 +34,7 @@ const Translation = () => {
 
   // change every letter typed into its respective image
   const handleTranslation = (letter) => {
-    // if (!(typeof(letter)==='string'))
+
     setWord(letter);
     return <img src={wordToImage(letter).find((element) => element.name === letter)}/>
   };
@@ -64,7 +63,6 @@ const Translation = () => {
         <div id="ASL-word-display">
           {signs}
         </div>
-        <TranslateWordButton />
       </div>
     </>
   );
