@@ -1,7 +1,6 @@
 import React from 'react'
 import { useUser } from '../../Context/UserProvider'
-import { storageDelete, storageSave } from '../../misc/storage'
-import { STORAGE_USER_KEY } from '../../misc/storage'
+import { storageDelete, storageSave,STORAGE_USER_KEY } from '../../miscellaneous/storage'
 import {clearHistory} from '../../api/translation'
 
 const ProfileButtons = () => {

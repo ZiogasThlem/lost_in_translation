@@ -1,6 +1,7 @@
 import { createHeaders } from "./helper"
 const api_URL = process.env.REACT_APP_API_URL
 
+// registering a new translation to the API
 export const newTranslation = async (user, translation) => {
     try {
         const response = await fetch(`${api_URL}/${user.id}`,{
@@ -19,8 +20,10 @@ export const newTranslation = async (user, translation) => {
         return [error.message, null]
     }
 } 
-export const clearHistory = async userID => {
 
+// Clearing the translation history of the user
+// by his provided Id from the API
+export const clearHistory = async userID => {
     try {
         const response = await fetch(`${api_URL}/${userID}`,{
             method: 'PATCH',

@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { userLogIn } from "../../api/user";
-import { storageSave } from "../../misc/storage";
+import { storageSave,STORAGE_USER_KEY} from "../../miscellaneous/storage";
 import { useUser } from "../../Context/UserProvider";
-import { STORAGE_USER_KEY } from "../../misc/storage";
 
 const usernameConfig = {
   required: true,
@@ -64,7 +63,7 @@ const LoginForm = () => {
         className='btn btn-lg btn-primary'>
           LogIn
         </button>
-        {loading && <p id='loading'>Redirecting</p>}
+        {loading && <p id='redirecting'>Redirecting</p>}
         {apiError && <p>{apiError}</p>}
       </form>
   );

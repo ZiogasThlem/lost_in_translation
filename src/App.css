@@ -29,6 +29,7 @@ body{
 #nav-top{
     width: 100%;
     background-color: var(--dark-yellow);
+    border-bottom: 30px double rgba(255, 191, 0, 0.816);
     justify-content: space-around;
     align-items: center;
     display: flex;
@@ -51,9 +52,6 @@ body{
     margin-bottom: 0.5%;
     max-height: 50%;
     width: 100%;
-}
-#profile-header,
-#translation-header{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -91,34 +89,8 @@ body{
 #profile-div{
     padding: 12px;
 }
-#login-header{
-    display: flex;
-}
 #login{
     margin: 15% 1%;
-}
-#redirect{
-    font-size: 25px;
-}
-#sign-list-header{
-    display: inline-block;
-    font-size: 50px;
-}
-#sign-list{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    height: 650px;
-    width: 600px;
-    border-top: 16px solid rgba(28,110,164,0.7);
-    background-color: rgba(47, 126, 179, 0.233);
-    border-radius: 40px 40px 0px 40px;
-    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-    box-shadow: 5px 5px 15px 5px #000000;
-    margin-bottom: 1.5%;
-}
-#list-of-translated-words{
-    column-count: 2;
 }
 #ASL-word-display{
     background-image:var(--fancy-bg-color);
@@ -130,7 +102,11 @@ body{
     height: 650px;
     width: 600px;
 }
-#translated-word{
+#empty-ASL-list{
+    padding-left: 2%;
+}
+#translated-word,
+#redirecting{
     font-size: 35px;
     margin-right: 45px;
 }
@@ -140,6 +116,28 @@ body{
     justify-items: center;
     max-height: max-content;
     margin-bottom: 10%;
+}
+#ASL-list-header{
+    display: inline-block;
+    font-size: 50px;
+}
+#ASL-list{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 650px;
+    width: 600px;
+    border-top: 16px solid rgba(28,110,164,0.7);
+    background-color: rgba(47, 126, 179, 0.233);
+    border-radius: 40px 40px 0px 40px;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    margin-bottom: 1.5%;
+    padding: 1%;
+}
+#ASL-translated-words{
+    column-count: 2;
+    font-style: italic;
 }
 #profile-div{
     flex: 70%;
@@ -160,17 +158,18 @@ body{
     justify-content: space-around;
     margin-bottom: 10%;
 }
-#empty-translation-list{
-    font-size:80px;
+#empty-translation-list,
+#empty-ASL-list{
+    font-size:70px;
     font-family: var(--happy-font);
 }
-    #footer{
-        display: flex;
-        justify-content: flex-end;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        background-image: linear-gradient(white,#ffda56
-        ,#FAB93B,#FFC700,#ffda56);
-        max-height:50px; 
-    }
+#footer{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient(white,#ffda56
+    ,#FAB93B,#FFC700,#ffda56);
+    max-height:50px; 
+}

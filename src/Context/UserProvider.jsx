@@ -1,6 +1,6 @@
 import React, {createContext, useContext, useState} from 'react'
-import { STORAGE_USER_KEY } from '../misc/storage'
-import { storageRead } from '../misc/storage'
+import { STORAGE_USER_KEY } from '../miscellaneous/storage'
+import { storageRead } from '../miscellaneous/storage'
 
 const UserContext = createContext()
 export const useUser = () => useContext(UserContext)

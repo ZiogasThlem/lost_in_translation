@@ -4,11 +4,13 @@ import ImageHolder from "../Components/TranslationComp/ImageHolder";
 import TranslationHeader from "../Components/TranslationComp/TranslationHeader";
 import TranslationResult from "../Components/TranslationComp/TranslationResult";
 import { useUser } from "../Context/UserProvider";
-import { storageSave, STORAGE_USER_KEY } from "../misc/storage";
-import withAuth from "../misc/withAuth";
+import { storageSave, STORAGE_USER_KEY } from "../miscellaneous/storage";
+import withAuth from "../miscellaneous/withAuth";
 
-// looping through word input and turning
-//every letter into an image source
+// looping through word input, turning
+// every letter into an object with
+// id,source and name fields
+// and storing them into an array
 const wordToImage = (word) => {
   let imageContainer = [];
   word.split("").forEach((letter, index) =>
@@ -62,6 +64,11 @@ const Translation = () => {
         />
         <div id="ASL-word-display">
           {signs}
+        {signs.length===0 && 
+        <p id='empty-ASL-list'>
+          This is a sign that you
+          must enter some words 👨‍🏫
+        </p>}
         </div>
       </div>
     </>

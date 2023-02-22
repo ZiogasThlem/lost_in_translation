@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import ProfileHeader from '../Components/ProfileComp/ProfileHeader'
 import ListOfTranslatedWords from '../Components/ProfileComp/ListOfTranslatedWords'
-import withAuth from '../misc/withAuth'
+import withAuth from '../miscellaneous/withAuth'
 import { useUser } from '../Context/UserProvider'
 import ProfileButtons from '../Components/ProfileComp/ProfileButtons'
 import { userById } from '../api/user'
-import { storageSave, STORAGE_USER_KEY } from '../misc/storage'
+import { storageSave, STORAGE_USER_KEY } from '../miscellaneous/storage'
 
 const Profile = () => {
   

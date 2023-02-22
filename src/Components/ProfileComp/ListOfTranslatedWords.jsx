@@ -6,17 +6,19 @@ const ListOfTranslatedWords = ({ translations }) => {
 
 
   return (
-    <section id='sign-list'>
+    <section id='ASL-list'>
       {listOfWords.length>0 && 
       <fieldset>
-        <h3 id='sign-list-header'><u>Words in ASL</u></h3>
-        <ol id='list-of-translated-words'>
+        <h3 id='ASL-list-header'><u>Words translated to ASL</u></h3>
+        <ol id='ASL-translated-words'>
           {listOfWords.reverse().slice(0,10)}
         </ol>
       </fieldset>}
       {listOfWords.length===0 && 
-      <p id='empty-translation-list'>Well...better go translate some words
-      <img src="signs\v.png"/></p>}
+      <p id='empty-translation-list'>
+        Well...better go translate some words
+        <img src="signs\v.png"/>
+      </p>}
     </section>
   );
 };

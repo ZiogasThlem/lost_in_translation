@@ -2,6 +2,8 @@ import { createHeaders } from "./helper"
 
 const api_URL = process.env.REACT_APP_API_URL
 
+// checking if the user exists in the API
+// and return their data, else returning error
 const userCheck = async (username) => {
     try {
         const response = await fetch(`${api_URL}?username=${username}`)
@@ -15,6 +17,7 @@ const userCheck = async (username) => {
     }
 }
 
+// creating new user
 const userCreate = async (username) => {
     try {
         const response = await fetch(api_URL, {
@@ -35,6 +38,9 @@ const userCreate = async (username) => {
     }
 }
 
+// When user tries to login, we're checking if
+// they're already registered in the API via userCheck
+// and if not we're registering them with the use of userCreate
 export const userLogIn = async (username) => {
 
     const [checkError, user] = await userCheck(username)
@@ -44,6 +50,7 @@ export const userLogIn = async (username) => {
 
     return await userCreate(username)
 }
+// returning the Id of the user from the API
 export const userById = async (userID) => {
     try {
         const response = await fetch(`${api_URL}/${userID}`)
