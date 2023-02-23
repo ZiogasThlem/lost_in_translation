@@ -21,7 +21,7 @@ const ListOfTranslatedWords = ({ translations }) => {
       hasn't type anything */}
       {listOfWords.length === 0 && (
         <p id="empty-translation-list">
-          Well...better go translate some words
+          Well...it's time to translate some words
           <img src="signs\v.png" />
         </p>
       )}
