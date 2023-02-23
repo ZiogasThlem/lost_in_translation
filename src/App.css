@@ -1,3 +1,4 @@
+/* global styling */
 :root {
   --dark-yellow: #ffc700;
   --border-default: 1px solid black;
@@ -25,6 +26,7 @@ body {
 .App nav a:hover {
   box-shadow: 10px 5px 10px gray;
 }
+/* Navbar styling */
 #nav-top {
   width: 100%;
   background-color: var(--dark-yellow);
@@ -39,6 +41,7 @@ body {
   padding: 20px;
   font-size: 30px;
 }
+/* Header and Header content styling */
 #logo {
   margin-top: 1%;
   height: fit-content;
@@ -75,11 +78,6 @@ body {
   font-size: 65px;
   margin: 0px 15px 0px 15px;
 }
-#login-form,
-#translation-form {
-  width: 20%;
-  align-items: center;
-}
 #login-header,
 #translation-header,
 #profile-header,
@@ -88,8 +86,17 @@ body {
 #profile-div {
   padding: 12px;
 }
+/* Main body styling for Pages */
+#login-form,
+#translation-form {
+  width: 20%;
+  align-items: center;
+}
 #login {
   margin: 15% 1%;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
 }
 #ASL-word-display {
   background-image: var(--fancy-bg-color);
@@ -152,11 +159,6 @@ body {
 .input-group-lg {
   display: flex;
   flex: 50%;
-}
-#login{
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
 }
 #tr-form{
   flex-direction: column;

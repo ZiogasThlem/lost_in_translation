@@ -5,7 +5,7 @@ const LoginHeader = () => {
       <img
         className="login-header-item"
         id="logo"
-        src="images\Logo-Hello.png"
+        src="Logo-Hello.png"
         alt="eh?"
       />
       <p className="login-header-item" id="login-header-item-1">

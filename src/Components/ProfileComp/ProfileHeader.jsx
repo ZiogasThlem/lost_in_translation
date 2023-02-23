@@ -9,7 +9,7 @@ const ProfileHeader = () => {
       <img
         className="profile-header-item"
         id="logo"
-        src="images\Logo.png"
+        src="Logo.png"
         atl="LEL"
       />
     </header>
