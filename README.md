@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# **Lost in Translation**
+## **Idea**
+Build an online sign language translator as a Single Page Application using the React framework.
+The application will have one main feature to act as a “translator” from regular text to sign 
+language. The application must be able to translate English words and short sentences to 
+American sign language. The images for the sign language will be provided.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+See website here: https://lost-in-translation-ae1o-7fk71m9w0-gapegias.vercel.app
 
-## Available Scripts
+## **Set up the development environment**
+Make sure you have the following tools available:
+  - NPM/Node.js (LTS – Long Term Support version)
+  - React CRA (create-react-app)
+  - Visual Studio Code Text Editor/ IntelliJ
+  - Browser Developer Tools for testing and debugging
+  - Rest API: https://github.com/dewald-els/noroff-assignment-api
 
-In the project directory, you can run:
+## **Requirements for the sign language translator**
 
-### `npm start`
+## **1. Startup / Login Page**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img src="/pictures/start_up_page.png">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The first thing a user should see is the “Login page” where: 
+- the user must be able to enter their name 
+- username can not be empty, a message should view
 
-### `npm test`
+<img src="/pictures/start_up_page_empty_name.png">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- the username have to be saved to the Translation API 
+- remember to first check if the user exists
+- if user not exists create this user and store in the API 
+- the app must display the main page
+- users that are already logged in automatically be redirected 
+to the Translation page 
+- use the browsers’ local storage to manage the session
 
-### `npm run build`
+## **2. Translation Page**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="/pictures/translation_page.png">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- a user may only view this page if they are currently logged into the app 
+- redirect a user back to the login page if no active login session exists in the browser storage
+- user types in the input box at the top of the page 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src="/pictures/translation_page_click_translate.PNG">
 
-### `npm run eject`
+- user must click on the “translate” button to the right of the input 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<img src="/pictures/translation_page_click_translate_result.PNG">
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- text can not be empty, a message should view
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<img src="/pictures/translation_page_empty_word.png">
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- box to trigger the translation
+- translations must be stored using the API (See Required features for more information here: 
 
-## Learn More
+  https://github.com/dewald-els/noroff-assignment-api/blob/master/docs/lost-in-translation.md) 
+- sign language characters must appear in the “translated” box
+- check that it did not type special characters or numbers 
+  
+  (except space and will return one space)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## **3. Profile page**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src="/pictures/profile_page.PNG"> 
 
-### Code Splitting
+- the profile page must display the last 10 translations for the current user 
+- display only the text of the translation 
+- have also to be a button to clear the translations 
+- this should “delete” in your API and no longer display on the profile page 
+- add a message that user will lose history
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<img src="/pictures/profile_page_click_history%20button.PNG">
 
-### Analyzing the Bundle Size
+Before translate "hello"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img src="/pictures/profile_page_after_click_translate.PNG">
 
-### Making a Progressive Web App
+After translate "hello"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<img src="/pictures/profile_page_click_history%20button_result.PNG">
 
-### Advanced Configuration
+- the Logout button should clear all the storage and return to the start page
+- add a message that user is sure that wants to leave
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="/pictures/logout_button_dialog.png">
