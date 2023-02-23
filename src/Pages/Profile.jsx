@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import ProfileHeader from "../Components/ProfileComp/ProfileHeader";
-import ListOfTranslatedWords from "../Components/ProfileComp/ListOfTranslatedWords";
+import ProfileHeader from "../components/ProfileComp/ProfileHeader";
+import ListOfTranslatedWords from "../components/ProfileComp/ListOfTranslatedWords";
 import withAuth from "../miscellaneous/withAuth";
-import { useUser } from "../Context/UserProvider";
-import ProfileButtons from "../Components/ProfileComp/ProfileButtons";
+import { useUser } from "../context/UserProvider";
+import ProfileButtons from "../components/ProfileComp/ProfileButtons";
 import { userById } from "../api/user";
 import { storageSave, STORAGE_USER_KEY } from "../miscellaneous/storage";
 

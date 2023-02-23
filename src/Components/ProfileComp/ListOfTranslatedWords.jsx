@@ -1,9 +1,11 @@
 import TranslatedWord from "./TranslatedWord";
 
 const ListOfTranslatedWords = ({ translations }) => {
+
+  // passing each word type into the li component TranslatedWord
   const listOfWords = translations.map((word, index) => (
     <TranslatedWord key={index + 1 + " " + word} word={word} />
-  ));
+    ));
 
   return (
     <section id="ASL-list">

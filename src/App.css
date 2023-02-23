@@ -103,7 +103,8 @@ body {
   margin-top: 1%;
   -webkit-box-shadow: 0px 10px 13px -7px #000000,
     5px 5px 0px -30px rgba(0, 0, 0, 0);
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 0px -30px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 
+    5px 0px -30px rgba(0, 0, 0, 0);
   height: 650px;
   width: 600px;
   padding-left: 1.5%;
@@ -116,7 +117,7 @@ body {
   font-size: 35px;
   margin: 0px 45px;
 }
-#warning{
+#warning {
   font-size: 35px;
 }
 #translation-div {
@@ -140,7 +141,7 @@ body {
   width: 600px;
   border-top: 16px solid rgba(28, 110, 164, 0.7);
   background-color: rgba(47, 126, 179, 0.233);
-  border-radius: 40px 40px 0px 40px;
+  border-radius: 40px 40px 40px 40px;
   -webkit-box-shadow: 5px 5px 15px 5px #000000;
   box-shadow: 5px 5px 15px 5px #000000;
   margin-bottom: 1.5%;
@@ -160,7 +161,7 @@ body {
   display: flex;
   flex: 50%;
 }
-#tr-form{
+#translation-form {
   flex-direction: column;
   align-items: center;
 }
@@ -175,12 +176,14 @@ body {
   font-size: 70px;
   font-family: var(--happy-font);
 }
+/* footer styling */
 #footer {
   display: flex;
   justify-content: flex-end;
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-image: linear-gradient(white, #ffda56, #fab93b, #ffc700, #ffda56);
+  background-image: linear-gradient(white, #ffda56,
+  #fab93b, #ffc700, #ffda56);
   max-height: 50px;
 }

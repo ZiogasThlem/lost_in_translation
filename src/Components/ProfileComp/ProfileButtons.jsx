@@ -1,5 +1,5 @@
 import React from "react";
-import { useUser } from "../../Context/UserProvider";
+import { useUser } from "../../context/UserProvider";
 import {
   storageDelete,
   storageSave,
@@ -10,6 +10,8 @@ import { clearHistory } from "../../api/translation";
 const ProfileButtons = () => {
   const { user, setUser } = useUser();
 
+  // delete user from the session storage memory
+  // and redirecting the to the logout page
   const handleLogout = () => {
     if (window.confirm("Are you sure you want to logout?")) {
       storageDelete(STORAGE_USER_KEY);
@@ -17,6 +19,8 @@ const ProfileButtons = () => {
     }
   };
 
+  // clearing all the words translated from the API
+  // and displaying an appropriate message
   const handleClearHistory = async () => {
     if (
       !window.confirm("Are you sure you want to clear translation history?")

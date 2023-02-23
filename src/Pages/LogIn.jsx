@@ -1,6 +1,6 @@
 import React from "react";
-import LoginForm from "../Components/LoginComp/LoginForm";
-import LoginHeader from "../Components/LoginComp/LoginHeader";
+import LoginForm from "../components/LoginComp/LoginForm";
+import LoginHeader from "../components/LoginComp/LoginHeader";
 
 const LogIn = () => {
   return (

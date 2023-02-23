@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useUser } from "../../Context/UserProvider";
+import { useUser } from "../../context/UserProvider";
 
 // navbar component for translation-profile page
 // displaying while user is logged in

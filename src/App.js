@@ -1,10 +1,10 @@
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import LogIn from './Pages/LogIn';
-import Translation from './Pages/Translation';
-import Profile from './Pages/Profile';
-import NavbarTop from './Components/Navbar/NavbarTop';
-import NavbarBottom from './Components/Navbar/NavbarBottom';
+import LogIn from './pages/LogIn';
+import Translation from './pages/Translation';
+import Profile from './pages/Profile';
+import NavbarTop from './components/Navbar/NavbarTop';
+import NavbarBottom from './components/Navbar/NavbarBottom';
 
 function App() {
   return (

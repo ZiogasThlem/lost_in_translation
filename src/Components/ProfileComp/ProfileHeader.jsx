@@ -10,7 +10,7 @@ const ProfileHeader = () => {
         className="profile-header-item"
         id="logo"
         src="Logo.png"
-        atl="LEL"
+        atl="not found"
       />
     </header>
   );

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { userLogIn } from "../../api/user";
 import { storageSave, STORAGE_USER_KEY } from "../../miscellaneous/storage";
-import { useUser } from "../../Context/UserProvider";
+import { useUser } from "../../context/UserProvider";
 
 // criteria for valid username
 const usernameConfig = {
