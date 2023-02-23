@@ -2,6 +2,8 @@
 
 By Ziogas Tilemachos and George Pegias
 
+The project is also deployed at https://lost-in-translation-1.vercel.app/translation
+
 This is the second assignment of the FrontEnd section of Noroff FullStack Course. It is a React project, making use of some Bootstrap classes for styling.
 
 We used two separate branches to work our way through the project with our names on each of them, and of course the master branch that has the final product. In the end of each day we reviewed the progress each of us individually was making and collectively deciding what to implement and what not to. For the purpose of having a better understanding of React while working through this project, we both worked on some of the same requirements alongside of watching the provided example videos.
@@ -19,10 +21,9 @@ The project consists of the following directories (excluding the default React f
   3. **miscellaneous directory:** There, we can find a storage.js script which is used to perform the Save, Read and Delete actions to the session storage memory about the user and the user's translations, and the withAuth.jsx file that confirms that the user that navigates to each page is authorized to do so (basically checks if user is present in the session storage) and if not, it automatically navigates to the Login page.
   4. **pages directory:** There, the parent components for each of the web application's pages are placed. The Login and Profile pages only have the basic component functionality. Diving into the Translation page, we implemented most of the page's functionality directly here. In previous commits there is an approach with the code shared among child components, but in reality it was the same functionality with more a lot more code lines.
   5. **components directory:** In this directory there are placed four subdirectories which we will refer to each separately:
-    1. **Login components:** There are placed the LoginForm component, responsible for redirecting the user to the next page, through an input form and the LoginHeader component.
-    2. **Translation components:** As the page's functionality is placed in the parent Translation.jsx component, only the TranslationHeader is found in this directory.
-    3. **Profile components:** Four components are placed here: the TranslatedWord component is basically a list item, that represents each translated into ASL word that will be displayed in the ListOfTranslatedWords component. The ProfileButtons component include the Logout and Clear History buttons' functionality and lastly, of course, the ProfileHeader component.
-    4. **NavBar components:** Lastly there we can find the Navbar with, from left to right, the web application's name, the links to the Translation and Profile pages and the each time logged in user's name, that is only present on these two pages, and a simple footer component that is always present.
-  6. Two .pdf files with the Component Tree and the Wireframe we designed. The final project differs a little, but they were both acted as guides through the project implementation.
-
-  The project is also deployed at https://lost-in-translation-1.vercel.app/translation
+  
+  - **Login components:** There are placed the LoginForm component, responsible for redirecting the user to the next page, through an input form and the LoginHeader component.
+  - **Translation components:** As the page's functionality is placed in the parent Translation.jsx component, only the TranslationHeader is found in this directory.
+  - **Profile components:** Four components are placed here: the TranslatedWord component is basically a list item, that represents each translated into ASL word that will be displayed in the ListOfTranslatedWords component. The ProfileButtons component include the Logout and Clear History buttons' functionality and lastly, of course, the ProfileHeader component.
+  - **NavBar components:** Lastly there we can find the Navbar with, from left to right, the web application's name, the links to the Translation and Profile pages and the each time logged in user's name, that is only present on these two pages, and a simple footer component that is always present.
+  - Two .pdf files with the Component Tree and the Wireframe we designed. The final project differs a little, but they were both acted as guides through the project implementation.
