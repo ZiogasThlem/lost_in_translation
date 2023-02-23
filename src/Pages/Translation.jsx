@@ -46,12 +46,11 @@ const Translation = () => {
                     images.push(
                      <img
                         src={"signs/space.png"}
-                        alt={space + ".png"}
+                        alt= "not found"
                         key={index}
                         width="87"
                         height="87"
-                      />
-                }
+                      />)}
                 else{
                    images.push(
                      <img
@@ -64,22 +63,6 @@ const Translation = () => {
                    );
                }
            }
-    //
-   // const letters = /^[A-Za-z\s]*$/;
-  //  if (word.match(letters)) {
-    //  let index = 0;
-    //  for (const letter of word) {
-      //  index++;
-      //  images.push(
-      //    <img
-      //      src={"signs/" + letter + ".png"}
-      //      alt={letter + ".png"}
-      //      key={index}
-      //      width="87"
-      //      height="87"
-      //    />
-      //  );
-      //}
       setTranslateWord(images);
       const [error, updatedUser] = await newTranslation(user, word);
       storageSave(STORAGE_USER_KEY, updatedUser);
