@@ -33,21 +33,53 @@ const Translation = () => {
   // When 'submit' button clicked, take the word and traslate it in images
   const onSubmit = async ({ word }) => {
     const images = [];
-    const letters = /^[A-Za-z]+$/;
-    if (word.match(letters)) {
-      let index = 0;
-      for (const letter of word) {
-        index++;
-        images.push(
-          <img
-            src={"signs/" + letter + ".png"}
-            alt={letter + ".png"}
-            key={index}
-            width="87"
-            height="87"
-          />
-        );
-      }
+    //
+    const letters = /^[A-Za-z\s]*$/
+    if(word.match(letters)){
+        let index = 0;
+        let trimFromExtraSpaces = word.split(' ')
+                                      .filter(letter => letter !== '')
+                                      .join(' ')
+        for(const letter of trimFromExtraSpaces){
+             index++
+             if(letter === ' '){
+                    images.push(
+                     <img
+                        src={"signs/space.png"}
+                        alt={space + ".png"}
+                        key={index}
+                        width="87"
+                        height="87"
+                      />
+                }
+                else{
+                   images.push(
+                     <img
+                        src={"signs/" + letter + ".png"}
+                        alt={letter + ".png"}
+                        key={index}
+                        width="87"
+                        height="87"
+                      />
+                   );
+               }
+           }
+    //
+   // const letters = /^[A-Za-z\s]*$/;
+  //  if (word.match(letters)) {
+    //  let index = 0;
+    //  for (const letter of word) {
+      //  index++;
+      //  images.push(
+      //    <img
+      //      src={"signs/" + letter + ".png"}
+      //      alt={letter + ".png"}
+      //      key={index}
+      //      width="87"
+      //      height="87"
+      //    />
+      //  );
+      //}
       setTranslateWord(images);
       const [error, updatedUser] = await newTranslation(user, word);
       storageSave(STORAGE_USER_KEY, updatedUser);
