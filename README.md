@@ -11,8 +11,19 @@ We used two separate branches to work our way through the project with our names
 The project result is a web application that, making use of an API acting as a Database, represents an interpreter, a translator from English to American Sign Language. In reality, each letter is translated individually, thus the "translation" is not an actual ASL word, rather the sum of the ASL letters that would represent the word. The web app consists of three pages:
 
 - **Login Page:**   The first thing that a user witness when they enter is (besides the heartwarming Robot that greets them!) a login form that upon passing their desired username, will redirect them to the Translation page.
+
+<img src="/Pages Screenshots/Login-page.png">
+
 - **Translation Page:**  The user is then urged to enter some words to the Translation form. We let the user know, that they cannot enter any numbers or special characters in the form, as words that contain them will not be translated Once they click on the Translate button, the word they typed appears in the box below as a set of ASL letters! Not only that, the word is also stored in the user's profile.
+
+<img src="/Pages Screenshots/Translation-empty.png">
+<img src="/Pages Screenshots/Translation-with-word.png">
+
 - **Profile Page:**  The user can access this page (as well as the Translation page) from the Navbar link, as long as they are logged in. Here, they can see they last 10 words they translated, and have the option to clear their history or even log out of the web app (they are warned about each of the choices in case they change their mind).
+
+<img src="/Pages Screenshots/Profile-empty.png">
+<img src="/Pages Screenshots/Profile-with-word.png">
+
 
 The project consists of the following directories (excluding the default React files):
 
