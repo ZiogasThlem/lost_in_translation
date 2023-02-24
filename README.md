@@ -2,7 +2,7 @@
 
 By Ziogas Tilemachos and George Pegias
 
-The project is also deployed at https://lost-in-translation-1.vercel.app/translation
+The project is also deployed at https://lost-in-translation-1.vercel.app
 
 This is the second assignment of the FrontEnd section of Noroff FullStack Course. It is a React project, making use of some Bootstrap classes for styling.
 
